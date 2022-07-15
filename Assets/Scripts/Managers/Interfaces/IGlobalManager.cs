@@ -1,5 +1,8 @@
 ﻿namespace Managers
 {
+    /// <summary>
+    /// A global manager containing all the managers in the game.
+    /// </summary>
     public interface IGlobalManager : IManager
     {
         /// <summary>

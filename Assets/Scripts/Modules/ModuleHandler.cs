@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace Entities.Modules
 {
@@ -9,14 +9,14 @@ namespace Entities.Modules
     /// </summary>
     public class ModuleHandler
     {
-        Entity entity;                                              // The parent entity that holds the handler.
+        public Entity entity { get; private set; }                  // The parent entity that holds the handler.
         public List<IModule> modules = new List<IModule>();         // List of all handled modules.
+        public Action OnInitModulesEnd;                             // Invokes after all modules have been initialized.
 
         public ModuleHandler(Entity entity)
         {
             this.entity = entity;
             InitModules();
-            InitModulesEnd();
         }
 
         /// <summary>
@@ -27,15 +27,9 @@ namespace Entities.Modules
             modules.AddRange(entity.modulesParent.GetComponentsInChildren<IModule>());
             for (int i = 0; i < modules.Count; i++)
                 modules[i].Init(this);
-        }
 
-        /// <summary>
-        /// Completes initialization of handled modules. Required to retrieve the module after initialization.
-        /// </summary>
-        void InitModulesEnd()
-        {
-            for (int i = 0; i < modules.Count; i++)
-                modules[i].OnInitEnd();
+            // Completes initialization of handled modules. Required to retrieve the module after initialization.
+            OnInitModulesEnd?.Invoke();
         }
 
         /// <summary>
@@ -50,7 +44,7 @@ namespace Entities.Modules
             {
                 if (modules[i] is T)
                 {
-                    module.bindedModules.Add(modules[i]);
+                    module.BindedModules.Add(modules[i]);
                     return (T)modules[i];
                 }
             }
@@ -83,7 +77,7 @@ namespace Entities.Modules
                 if (modules[i] is T)
                 {
                     // Destroys the game object with the found module.
-                    Object.Destroy(modules[i].GetGameObject());
+                    UnityEngine.Object.Destroy(modules[i].GetGameObject());
                     // Removes from the handled modules collection.
                     modules.RemoveAt(i);
                 }

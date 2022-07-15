@@ -16,7 +16,7 @@ namespace Managers
         [RuntimeInitializeOnLoadMethod]
         static void OnRuntimeMethodLoad()
         {
-            IManager globalManager = Instantiate(Resources.Load<GameObject>("_Global")).GetComponent<IManager>();
+            IManager globalManager = Instantiate(Resources.Load<GameObject>("GlobalManager")).GetComponent<IManager>();
             globalManager.Init(null);
         }
         #endregion
@@ -30,6 +30,9 @@ namespace Managers
         public void Init(IManager manager)
         {
             DontDestroyOnLoad(gameObject);
+
+            if (transform.childCount <= 0)
+                return;
 
             managers.AddRange(GetComponentsInChildren<IManager>());
             foreach (IManager c in managers) c.Init(this);

@@ -1,12 +1,18 @@
-﻿public interface IManager
+﻿namespace Managers
 {
     /// <summary>
-    /// Initializes the manager.
+    /// Interface for all game managers (audio, inputs, enemies, etc.) 
     /// </summary>
-    void Init(IManager manager);
+    public interface IManager
+    {
+        /// <summary>
+        /// Initializes the manager.
+        /// </summary>
+        void Init(IManager manager);
 
-    /// <summary>
-    /// Calls after manager initialization.
-    /// </summary>
-    void OnInitEnd();
+        /// <summary>
+        /// Calls after manager initialization.
+        /// </summary>
+        void OnInitEnd();
+    }
 }
