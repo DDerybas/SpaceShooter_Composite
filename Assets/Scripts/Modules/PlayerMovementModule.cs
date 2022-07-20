@@ -10,27 +10,27 @@ namespace Entities.Modules
     public class PlayerMovementModule : MonoBehaviour, IMovementModule
     {
         #region IModule
-        public ModuleHandler Handler { get; set; }
         public List<IModule> BindedModules { get; set; }
         #endregion
 
-        IInputModule inputModule;           // Player input module.
-        Vector2 direction;                  // Direction of movement.
-        Transform entityTransform;          // The transform of the movable entity.
-        [SerializeField] float speed;       // Movement speed.
+        private IModuleHandler handler;             // A modules handler that processes all the modules it contains.
+        private IInputModule inputModule;           // Player input module.
+        private Vector2 direction;                  // Direction of movement.
+        private Transform entityTransform;          // The transform of the movable entity.
+        [SerializeField] private float speed;       // Movement speed.
 
-        public void Init(ModuleHandler handler)
+        public void Init(IModuleHandler handler)
         {
-            Handler = handler;
+            this.handler = handler;
             BindedModules = new List<IModule>();
-            Handler.OnInitModulesEnd += OnInitModulesEnd;
-            entityTransform = Handler.entity.transform;
+            this.handler.OnInitModulesEnd += OnInitModulesEnd;
+            entityTransform = this.handler.GetEntity().transform;
         }
 
         // Gets the input module and subscribes to the input axis event.
         void OnInitModulesEnd()
         {
-            inputModule = Handler.RetrieveModule<IInputModule>(this);
+            inputModule = handler.RetrieveModule<IInputModule>(this);
             inputModule.OnAxisAction += SetDirection;
         }
 
@@ -64,7 +64,7 @@ namespace Entities.Modules
         // Unsubscribes from initialization and axis events.
         private void OnDestroy()
         {
-            Handler.OnInitModulesEnd -= OnInitModulesEnd;
+            handler.OnInitModulesEnd -= OnInitModulesEnd;
             inputModule.OnAxisAction -= SetDirection;
         }
     }

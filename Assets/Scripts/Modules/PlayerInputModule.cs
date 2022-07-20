@@ -9,7 +9,6 @@ namespace Entities.Modules
     public class PlayerInputModule : MonoBehaviour, IInputModule
     {
         #region IModule
-        public ModuleHandler Handler { get; set; }
         public List<IModule> BindedModules { get; set; }
         #endregion
 
@@ -24,9 +23,8 @@ namespace Entities.Modules
         /// Initializes the module with the passed ModuleHandler. Subscribes for all player inputs.
         /// </summary>
         /// <param name="handler">Entity handler.</param>
-        public void Init(ModuleHandler handler)
+        public void Init(IModuleHandler handler)
         {
-            Handler = handler;
             BindedModules = new List<IModule>();
 
             inputActions = new InputActions();

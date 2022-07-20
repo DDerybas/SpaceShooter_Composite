@@ -7,11 +7,11 @@ namespace Entities.Modules
     /// <summary>
     /// Initializes and processes all modules. Allows to Get/Add/Remove a module.
     /// </summary>
-    public class ModuleHandler
+    public class ModuleHandler : IModuleHandler
     {
-        public Entity entity { get; private set; }                  // The parent entity that holds the handler.
-        public List<IModule> modules = new List<IModule>();         // List of all handled modules.
-        public Action OnInitModulesEnd;                             // Invokes after all modules have been initialized.
+        private Entity entity;                                      // The parent entity that holds the handler.
+        private List<IModule> modules = new List<IModule>();        // List of all handled modules.
+        public Action OnInitModulesEnd { get; set; }                // Invokes after all modules have been initialized.
 
         public ModuleHandler(Entity entity)
         {
@@ -49,6 +49,9 @@ namespace Entities.Modules
                 }
             }
 
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            Debug.LogError(string.Format("Module of type '{0}' not found!", module.GetType().ToString()));
+#endif
             return default;
         }
 
@@ -82,6 +85,15 @@ namespace Entities.Modules
                     modules.RemoveAt(i);
                 }
             }
+        }
+
+        /// <summary>
+        /// Returns the entity that holds the handler.
+        /// </summary>
+        /// <returns></returns>
+        public Entity GetEntity()
+        {
+            return entity;
         }
     }
 }

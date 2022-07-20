@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 namespace Managers
 {
@@ -22,24 +23,22 @@ namespace Managers
         #endregion
 
         private List<IManager> managers = new List<IManager>();     // Holds all child managers.
+        [SerializeField] private Transform managersContainer;       // Contains all managers game objects.
+
+        public Action OnInitEndAction { get; set; }                 // Calls after manager initialization.
 
         /// <summary>
         /// Initializes the GlobalManager.
         /// </summary>
         /// <param name="manager">A manager that implements the IManager interface.</param>
-        public void Init(IManager manager)
+        public void Init(IGlobalManager manager)
         {
             DontDestroyOnLoad(gameObject);
 
-            if (transform.childCount <= 0)
-                return;
-
-            managers.AddRange(GetComponentsInChildren<IManager>());
+            managers.AddRange(managersContainer.GetComponentsInChildren<IManager>());
             foreach (IManager c in managers) c.Init(this);
-            foreach (IManager c in managers) c.OnInitEnd();
+            OnInitEndAction?.Invoke();
         }
-
-        public void OnInitEnd() { }
 
         /// <summary>
         /// Looks for a manager in the collection of managers and returns if found.

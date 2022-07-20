@@ -9,11 +9,6 @@ namespace Entities.Modules
     public interface IModule
     {
         /// <summary>
-        /// A modules handler that processes all the modules it contains.
-        /// </summary>
-        ModuleHandler Handler { get; set; }
-
-        /// <summary>
         /// All modules on which this particular module depends. 
         /// </summary>
         List<IModule> BindedModules { get; set; }
@@ -22,7 +17,7 @@ namespace Entities.Modules
         /// Initializes the module with the passed ModuleHandler.
         /// </summary>
         /// <param name="handler">Entity handler.</param>
-        void Init(ModuleHandler handler);
+        void Init(IModuleHandler handler);
 
         /// <summary>
         /// Returns the game object to which the module is attached.

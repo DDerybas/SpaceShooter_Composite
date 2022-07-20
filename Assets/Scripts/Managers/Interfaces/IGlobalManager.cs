@@ -23,5 +23,10 @@
         /// </summary>
         /// <param name="manager">Manager of type IManager</param>
         void RemoveManager(IManager manager);
+
+        /// <summary>
+        /// Calls after manager initialization.
+        /// </summary>
+        System.Action OnInitEndAction { get; set; }
     }
 }
