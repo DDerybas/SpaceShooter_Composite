@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Entities.Modules
@@ -9,6 +7,16 @@ namespace Entities.Modules
     /// </summary>
     public interface IMovementModule : IModule
     {
-        void SetDirection(Vector2 direction);       // Sets the direction of movement of the entity.
+        /// <summary>
+        /// Sets the direction of movement of the entity.
+        /// </summary>
+        /// <param name="direction">The direction of movement.</param>
+        void SetDirection(Vector2 direction);
+
+        /// <summary>
+        /// // Sets the speed of movement of the entity.
+        /// </summary>
+        /// <param name="speed">Movement speed.</param>
+        void SetSpeed(float speed);
     }
 }

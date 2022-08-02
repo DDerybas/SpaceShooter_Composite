@@ -1,17 +1,14 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Entities.Modules
 {
+    /// <summary>
+    /// A module that handles the player inputs.
+    /// </summary>
     public class PlayerInputModule : MonoBehaviour, IInputModule
     {
-        #region IModule
-        public List<IModule> BindedModules { get; set; }
-        #endregion
-
         #region IInputModule
         public Action<Vector2> OnAxisAction { get; set; }
         public Action<ButtonType, bool> OnButtonAction { get; set; }
@@ -25,8 +22,6 @@ namespace Entities.Modules
         /// <param name="handler">Entity handler.</param>
         public void Init(IModuleHandler handler)
         {
-            BindedModules = new List<IModule>();
-
             inputActions = new InputActions();
 
             // Subscribes to inputs.
@@ -47,13 +42,15 @@ namespace Entities.Modules
             inputActions.Player.Pause.Enable();
         }
 
-        // Sends an axis event.
-        void Axis_performed(InputAction.CallbackContext obj) { OnAxisAction?.Invoke(obj.ReadValue<Vector2>()); }
+        /// <summary>
+        /// Sends an axis event.
+        /// </summary>
+        private void Axis_performed(InputAction.CallbackContext obj) => OnAxisAction?.Invoke(obj.ReadValue<Vector2>());
 
-        // Returns the game object to which the module is attached.
-        public GameObject GetGameObject()
-        {
-            return gameObject;
-        }
+        /// <summary>
+        /// Returns the game object to which the module is attached.
+        /// </summary>
+        /// <returns>Entity gameObject.</returns>
+        public GameObject GetGameObject() => gameObject;
     }
 }

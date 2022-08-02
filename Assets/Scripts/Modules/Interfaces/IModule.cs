@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Entities.Modules
 {
@@ -8,11 +7,6 @@ namespace Entities.Modules
     /// </summary>
     public interface IModule
     {
-        /// <summary>
-        /// All modules on which this particular module depends. 
-        /// </summary>
-        List<IModule> BindedModules { get; set; }
-
         /// <summary>
         /// Initializes the module with the passed ModuleHandler.
         /// </summary>

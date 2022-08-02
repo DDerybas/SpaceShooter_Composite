@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Entities.Modules
@@ -7,59 +5,52 @@ namespace Entities.Modules
     /// <summary>
     /// Moves the player in the direction it receives from the input module.
     /// </summary>
-    public class PlayerMovementModule : MonoBehaviour, IMovementModule
+    public class PlayerMovementModule : MovementModule
     {
-        #region IModule
-        public List<IModule> BindedModules { get; set; }
-        #endregion
+        private IModuleHandler handler;                 // A modules handler that processes all the modules it contains.
+        private IInputModule inputModule;               // Player input module.
 
-        private IModuleHandler handler;             // A modules handler that processes all the modules it contains.
-        private IInputModule inputModule;           // Player input module.
-        private Vector2 direction;                  // Direction of movement.
-        private Transform entityTransform;          // The transform of the movable entity.
-        [SerializeField] private float speed;       // Movement speed.
+        [SerializeField] private Vector2 moveRange;     // Movement range.
 
-        public void Init(IModuleHandler handler)
+        /// <summary>
+        /// Initializes the module with the passed ModuleHandler.
+        /// </summary>
+        /// <param name="handler">Entity handler.</param>
+        public override void Init(IModuleHandler handler)
         {
+            base.Init(handler);
             this.handler = handler;
-            BindedModules = new List<IModule>();
             this.handler.OnInitModulesEnd += OnInitModulesEnd;
-            entityTransform = this.handler.GetEntity().transform;
-        }
-
-        // Gets the input module and subscribes to the input axis event.
-        void OnInitModulesEnd()
-        {
-            inputModule = handler.RetrieveModule<IInputModule>(this);
-            inputModule.OnAxisAction += SetDirection;
-        }
-
-        // Causes the direction of movement of the entity.
-        private void Update()
-        {
-            MoveDirection();
         }
 
         /// <summary>
-        /// Sets the desired direction of movement.
+        /// Gets the input module and subscribes to the input axis event.
         /// </summary>
-        /// <param name="direction">Direction of movement.</param>
-        public void SetDirection(Vector2 direction)
+        private void OnInitModulesEnd()
         {
-            this.direction = direction;
+            inputModule = handler.GetModule<IInputModule>();
+            inputModule.OnAxisAction += SetDirection;
         }
 
-        // Moves the entity in the desired direction.
-        void MoveDirection()
+        /// <summary>
+        /// Moves the entity in the desired direction, with range 'moveRange'.
+        /// </summary>
+        protected override void MoveDirection()
         {
-            entityTransform.Translate(direction.x * speed * Time.deltaTime, 0, 0);
+            base.MoveDirection();
+            Vector3 entityPos = entityTransform.position;
+            entityPos.x = Mathf.Clamp(entityPos.x, -moveRange.x, moveRange.x);
+            entityPos.y = Mathf.Clamp(entityPos.y, -moveRange.y, moveRange.y);
+            entityTransform.position = entityPos;
         }
 
-        // Returns the game object to which the module is attached.
-        public GameObject GetGameObject()
+#if UNITY_EDITOR
+        private void OnDrawGizmosSelected()
         {
-            return gameObject;
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(Vector2.zero, moveRange * 2);
         }
+#endif
 
         // Unsubscribes from initialization and axis events.
         private void OnDestroy()

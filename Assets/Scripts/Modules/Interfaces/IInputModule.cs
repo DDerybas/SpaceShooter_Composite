@@ -13,6 +13,9 @@ namespace Entities.Modules
         Pause
     }
 
+    /// <summary>
+    /// A module that handles the player inputs.
+    /// </summary>
     public interface IInputModule : IModule
     {
         /// <summary>
