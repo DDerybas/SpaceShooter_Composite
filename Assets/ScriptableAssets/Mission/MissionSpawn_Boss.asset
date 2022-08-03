@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e795df3a5daad4e92f6b0e35325d3e, type: 3}
+  m_Name: MissionSpawn_Boss
+  m_EditorClassIdentifier: 
+  _missionStartTime: 0
+  _missionWorkDelay: 0
+  entityType: {fileID: 11400000, guid: 70a4784f8a2f58e489602b394c0c7a4f, type: 2}
+  entitiesToSpawnCount: 1
+  spawnPositionType: 3
