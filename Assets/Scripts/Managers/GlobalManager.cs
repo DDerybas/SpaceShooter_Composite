@@ -6,11 +6,10 @@ using System;
 namespace Managers
 {
     /// <summary>
-    /// A global singleton manager containing all the managers in the game.
+    /// A global manager containing all the managers in the game.
     /// </summary>
     public class GlobalManager : MonoBehaviour, IGlobalManager
     {
-        #region Singleton
         /// <summary>
         /// Loads prefab with GlobalManager on it and then instantiates/initiates.
         /// </summary>
@@ -20,7 +19,6 @@ namespace Managers
             IManager globalManager = Instantiate(Resources.Load<GameObject>("GlobalManager")).GetComponent<IManager>();
             globalManager.Init(null);
         }
-        #endregion
 
         private List<IManager> managers = new List<IManager>();     // Holds all child managers.
         [SerializeField] private Transform managersContainer;       // Contains all managers game objects.
@@ -28,14 +26,18 @@ namespace Managers
         public Action OnInitEndAction { get; set; }                 // Calls after manager initialization.
 
         /// <summary>
-        /// Initializes the GlobalManager.
+        /// Initializes the manager.
         /// </summary>
-        /// <param name="manager">A manager that implements the IManager interface.</param>
+        /// <param name="manager">A manager that implements the IGlobalManager interface.</param>
         public void Init(IGlobalManager manager)
         {
             DontDestroyOnLoad(gameObject);
 
             managers.AddRange(managersContainer.GetComponentsInChildren<IManager>());
+
+            Transform managersTransform = GameObject.Find("[Managers]").transform;
+            managers.AddRange(managersTransform.GetComponentsInChildren<IManager>());
+
             foreach (IManager c in managers) c.Init(this);
             OnInitEndAction?.Invoke();
         }

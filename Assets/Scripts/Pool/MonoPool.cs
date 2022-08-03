@@ -12,7 +12,7 @@ public class MonoPool<T> : MonoBehaviour, IMonoPool<T> where T : MonoBehaviour
     
     [SerializeField] protected AssetReference baseObject;       // A base asset from which to create a pool.
     private List<T> pooledObjects = new List<T>();              // Pool object collection.
-    protected IMonoFactory<T> factory;                              // A factory of the same type from which an asset can be obtained.
+    protected IMonoFactory<T> factory;                          // A factory of the same type from which an asset can be obtained.
 
     [SerializeField] private ObjectType _poolType;              // A type of the pool.
     public ObjectType PoolType { get => _poolType; set => _poolType = value; }
