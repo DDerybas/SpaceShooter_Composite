@@ -1,0 +1,1194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8750042328719943829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4997274432c9c0c4eb188e624d096cac, type: 3}
+  m_Name: BT Sequence
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 1048}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -8750042328719943829}
+      _typeQualifiedName: System.Collections.Generic.List`1[[BehaviourTree.NodeState,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: _in
+        node: {fileID: -4371471880940609095}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: 4541528295202969594}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -8750042328719943829}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -3711938324375982325}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 
+--- !u!114 &-8510409200275937303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347f2e834a905b143bfe92a8205a15e7, type: 3}
+  m_Name: BT Invert
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 1192}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -8510409200275937303}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _in
+        node: {fileID: -5410301603726415268}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -8510409200275937303}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -3711938324375982325}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 0
+--- !u!114 &-7845939164775238654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6524a6d3fb013b49b304eba0d850118, type: 3}
+  m_Name: BT Selector
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: 408}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -7845939164775238654}
+      _typeQualifiedName: System.Collections.Generic.List`1[[BehaviourTree.NodeState,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: _in
+        node: {fileID: -987655666865598637}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: -4669626653006315544}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: 3585732503245136168}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -7845939164775238654}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -4710829740646138828}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 
+--- !u!114 &-6446176593676874917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4997274432c9c0c4eb188e624d096cac, type: 3}
+  m_Name: BT Sequence
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 152, y: -72}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -6446176593676874917}
+      _typeQualifiedName: System.Collections.Generic.List`1[[BehaviourTree.NodeState,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: _in
+        node: {fileID: -4578651323493475180}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: 585383973706528517}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: -1346283000385836409}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -6446176593676874917}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: 4166840615761093999}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 
+--- !u!114 &-6185831901864672450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bt Is At Pos
+  m_EditorClassIdentifier: Assembly-CSharp:BehaviourTree.AI:BtIsAtPos
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 1048}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -6185831901864672450}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -8750042328719943829}
+        reroutePoints: []
+      - fieldName: _out
+        node: {fileID: -8750042328719943829}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  outPort:
+    _fieldName: 
+    _node: {fileID: 0}
+    _typeQualifiedName: 
+    connections: []
+    _direction: 0
+    _connectionType: 0
+    _typeConstraint: 0
+    _dynamic: 0
+  connections: []
+  <IsCurrentNode>k__BackingField: 0
+  selectedNodeColor:
+    r: 0.4
+    g: 0.6
+    b: 0.4
+    a: 1
+  idleNodeColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  useBaseColor: 1
+  pos: {x: 5, y: 2.5}
+  owner: {fileID: 0}
+  distanceAccuracy: 0.2
+--- !u!114 &-5920695934583550037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965c535d29b224a4b831347429b953e8, type: 3}
+  m_Name: BT Move To Pos
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 1304}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -5920695934583550037}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -3711938324375982325}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  destination: {x: 5, y: 2.5}
+  speed: 2
+--- !u!114 &-5818443614246531578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965c535d29b224a4b831347429b953e8, type: 3}
+  m_Name: BT Move To Pos
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 152, y: 88}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -5818443614246531578}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: 4166840615761093999}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 1
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  destination: {x: 0, y: 2.5}
+  speed: 2
+--- !u!114 &-5410301603726415268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a071f4c79b78e47aba99bc7d35e3ed, type: 3}
+  m_Name: BT Shoot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 1352}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -5410301603726415268}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -8510409200275937303}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+--- !u!114 &-4710829740646138828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96c5406d610314cab3722969cac232, type: 3}
+  m_Name: 'BT Root MoveLeftShoot '
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -344, y: 408}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -4710829740646138828}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _in
+        node: {fileID: -7845939164775238654}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -4710829740646138828}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 0
+  isDefault: 0
+--- !u!114 &-4669626653006315544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347f2e834a905b143bfe92a8205a15e7, type: 3}
+  m_Name: BT Invert
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 552}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -4669626653006315544}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _in
+        node: {fileID: 3460102046319618188}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -4669626653006315544}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -7845939164775238654}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 0
+--- !u!114 &-4578651323493475180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95235fe78bb82054e9b1fcf877b0a5dc, type: 3}
+  m_Name: BT Check Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 408, y: -88}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -4578651323493475180}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -6446176593676874917}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  pos: {x: 0, y: 2.5}
+--- !u!114 &-4371471880940609095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95235fe78bb82054e9b1fcf877b0a5dc, type: 3}
+  m_Name: BT Check Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 1048}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -4371471880940609095}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -8750042328719943829}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  pos: {x: 5, y: 2.5}
+--- !u!114 &-3957799043650872645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bt Is At Pos
+  m_EditorClassIdentifier: Assembly-CSharp:BehaviourTree.AI:BtIsAtPos
+  graph: {fileID: 11400000}
+  position: {x: 408, y: -72}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -3957799043650872645}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -6446176593676874917}
+        reroutePoints: []
+      - fieldName: _out
+        node: {fileID: -6446176593676874917}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  outPort:
+    _fieldName: 
+    _node: {fileID: 0}
+    _typeQualifiedName: 
+    connections: []
+    _direction: 0
+    _connectionType: 0
+    _typeConstraint: 0
+    _dynamic: 0
+  connections: []
+  <IsCurrentNode>k__BackingField: 0
+  selectedNodeColor:
+    r: 0.4
+    g: 0.6
+    b: 0.4
+    a: 1
+  idleNodeColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  useBaseColor: 1
+  pos: {x: 0, y: 2.5}
+  owner: {fileID: 0}
+  distanceAccuracy: 0.2
+--- !u!114 &-3941766652015878841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95235fe78bb82054e9b1fcf877b0a5dc, type: 3}
+  m_Name: BT Check Position
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 408}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -3941766652015878841}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -987655666865598637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  pos: {x: -5, y: 2.5}
+--- !u!114 &-3711938324375982325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6524a6d3fb013b49b304eba0d850118, type: 3}
+  m_Name: BT Selector
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: 1048}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -3711938324375982325}
+      _typeQualifiedName: System.Collections.Generic.List`1[[BehaviourTree.NodeState,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: _in
+        node: {fileID: -8750042328719943829}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: -8510409200275937303}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: -5920695934583550037}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -3711938324375982325}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -343066170698228796}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 
+--- !u!114 &-3225925351432015959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1727d39a649b648b72cd3dc0b9e5bf, type: 3}
+  m_Name: BT Change Root
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 568}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -3225925351432015959}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -987655666865598637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  rootNode: {fileID: -343066170698228796}
+--- !u!114 &-1346283000385836409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1727d39a649b648b72cd3dc0b9e5bf, type: 3}
+  m_Name: BT Change Root
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 408, y: 184}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: -1346283000385836409}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -6446176593676874917}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  rootNode: {fileID: -4710829740646138828}
+--- !u!114 &-987655666865598637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4997274432c9c0c4eb188e624d096cac, type: 3}
+  m_Name: BT Sequence
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 408}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -987655666865598637}
+      _typeQualifiedName: System.Collections.Generic.List`1[[BehaviourTree.NodeState,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: _in
+        node: {fileID: -3941766652015878841}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: -3225925351432015959}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -987655666865598637}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -7845939164775238654}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 
+--- !u!114 &-343066170698228796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96c5406d610314cab3722969cac232, type: 3}
+  m_Name: BT Root MoveRightShoot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -344, y: 1048}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: -343066170698228796}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _in
+        node: {fileID: -3711938324375982325}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: -343066170698228796}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 0
+  isDefault: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56846eeefdb15394bb6cc7103201eb85, type: 3}
+  m_Name: BTGraph_Boss
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 8888764350229052473}
+  - {fileID: 4166840615761093999}
+  - {fileID: -6446176593676874917}
+  - {fileID: -5818443614246531578}
+  - {fileID: 585383973706528517}
+  - {fileID: -1346283000385836409}
+  - {fileID: -4710829740646138828}
+  - {fileID: -7845939164775238654}
+  - {fileID: -987655666865598637}
+  - {fileID: -4669626653006315544}
+  - {fileID: 3585732503245136168}
+  - {fileID: -3225925351432015959}
+  - {fileID: 3460102046319618188}
+  - {fileID: -343066170698228796}
+  - {fileID: -3711938324375982325}
+  - {fileID: -8750042328719943829}
+  - {fileID: -8510409200275937303}
+  - {fileID: -5920695934583550037}
+  - {fileID: 4541528295202969594}
+  - {fileID: -5410301603726415268}
+  - {fileID: -4578651323493475180}
+  - {fileID: -3941766652015878841}
+  - {fileID: -4371471880940609095}
+  currentActiveNode: {fileID: -1346283000385836409}
+--- !u!114 &585383973706528517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560e316de6fbae044bb14b89bde67a75, type: 3}
+  m_Name: BT Stop
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 408, y: 88}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: 585383973706528517}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -6446176593676874917}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+--- !u!114 &1963702063067355834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Bt Is At Pos
+  m_EditorClassIdentifier: Assembly-CSharp:BehaviourTree.AI:BtIsAtPos
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 408}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: 1963702063067355834}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -987655666865598637}
+        reroutePoints: []
+      - fieldName: _out
+        node: {fileID: -987655666865598637}
+        reroutePoints: []
+      - fieldName: _out
+        node: {fileID: -987655666865598637}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  outPort:
+    _fieldName: 
+    _node: {fileID: 0}
+    _typeQualifiedName: 
+    connections: []
+    _direction: 0
+    _connectionType: 0
+    _typeConstraint: 0
+    _dynamic: 0
+  connections: []
+  <IsCurrentNode>k__BackingField: 0
+  selectedNodeColor:
+    r: 0.4
+    g: 0.6
+    b: 0.4
+    a: 1
+  idleNodeColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  useBaseColor: 1
+  pos: {x: -5, y: 2.5}
+  owner: {fileID: 0}
+  distanceAccuracy: 0.2
+--- !u!114 &3460102046319618188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a071f4c79b78e47aba99bc7d35e3ed, type: 3}
+  m_Name: BT Shoot
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 712}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: 3460102046319618188}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -4669626653006315544}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+--- !u!114 &3585732503245136168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965c535d29b224a4b831347429b953e8, type: 3}
+  m_Name: BT Move To Pos
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: 664}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: 3585732503245136168}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -7845939164775238654}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  destination: {x: -5, y: 2.5}
+  speed: 2
+--- !u!114 &4166840615761093999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6524a6d3fb013b49b304eba0d850118, type: 3}
+  m_Name: BT Selector
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -104, y: -72}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: 4166840615761093999}
+      _typeQualifiedName: System.Collections.Generic.List`1[[BehaviourTree.NodeState,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]],
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: _in
+        node: {fileID: -6446176593676874917}
+        reroutePoints: []
+      - fieldName: _in
+        node: {fileID: -5818443614246531578}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: 4166840615761093999}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: 8888764350229052473}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 
+--- !u!114 &4541528295202969594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1727d39a649b648b72cd3dc0b9e5bf, type: 3}
+  m_Name: BT Change Root
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 424, y: 1208}
+  ports:
+    keys:
+    - _in
+    values:
+    - _fieldName: _in
+      _node: {fileID: 4541528295202969594}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _out
+        node: {fileID: -8750042328719943829}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  rootNode: {fileID: -4710829740646138828}
+--- !u!114 &8888764350229052473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c96c5406d610314cab3722969cac232, type: 3}
+  m_Name: BT Root
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -360, y: -72}
+  ports:
+    keys:
+    - _out
+    - _in
+    values:
+    - _fieldName: _out
+      _node: {fileID: 8888764350229052473}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: _in
+        node: {fileID: 4166840615761093999}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: _in
+      _node: {fileID: 8888764350229052473}
+      _typeQualifiedName: BehaviourTree.NodeState, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  _in: 0
+  selectedNodeColor: {r: 0.4, g: 0.6, b: 0.4, a: 1}
+  idleNodeColor: {r: 0, g: 0, b: 0, a: 1}
+  useBaseColor: 1
+  _out: 0
+  isDefault: 1
