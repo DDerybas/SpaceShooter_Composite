@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 60f193150276d7047a27780baacfbb9d
+  m_SerializeEntries:
+  - m_GUID: 10865a65264d6dc4fa2a63ac99ef270a
+    m_Address: Entity/Player
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: 7d8c76b11aef69048a070482965d1b11
+    m_Address: Entity/MediumShip
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: d54f4f883fd82bc4987d1edfdb89cf0c
+    m_Address: Entity/SmallShip
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: 2e4dc147fef6c9542a5c3210fb731c02
+    m_Address: Entity/Boss1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: 970faa49f37f5ef42a838ea3232f3720
+    m_Address: Entity/Bullet
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: bb87971800a350845b042722e30f3987
+    m_Address: Entity/EnemyBullet
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: cbfde2f18aa984b4b994f0b38c776ef4
+    m_Address: Entity/UpgradeBonus
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  - m_GUID: ced039057e3f8734faaff8bec308cca8
+    m_Address: Effect/Explosion
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 53ccea5b1949b564ba39830a72673573, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7903793d3cc97344d9f3fba06fe3c882, type: 2}
+    - {fileID: 11400000, guid: 61a87f75ce3397e45a6f91bfceee661d, type: 2}

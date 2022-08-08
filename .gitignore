@@ -10,7 +10,7 @@
 [Uu]serSettings/
 
 Assets/AssetStoreTools*
-Assets/AddressableAssetsData/
+Assets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Visual Studio cache directory
 .vs/
