@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Linq;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -35,8 +36,8 @@ namespace Managers
 
             managers.AddRange(managersContainer.GetComponentsInChildren<IManager>());
 
-            Transform managersTransform = GameObject.Find("[Managers]").transform;
-            managers.AddRange(managersTransform.GetComponentsInChildren<IManager>());
+            GameObject managersGO = GameObject.Find("[Managers]");
+            if (managersGO != null) managers.AddRange(managersGO.GetComponentsInChildren<IManager>());
 
             foreach (IManager c in managers) c.Init(this);
             OnInitEndAction?.Invoke();
